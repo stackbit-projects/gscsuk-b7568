@@ -1,0 +1,1993 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  page_1:
+    type: page
+    label: Page 1
+    match:
+      - _posts/2018-06-01-header-image.md
+      - _posts/2018-07-01-welcome.md
+      - test/_posts/2018-07-01-welcome.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: tags
+        label: Tags
+      - type: object
+        name: article_header
+        label: Article Header
+        fields:
+          - type: string
+            name: type
+            label: Type
+          - type: object
+            name: image
+            label: Image
+            fields:
+              - type: image
+                name: src
+                label: Src
+  doc:
+    type: page
+    label: Doc
+    folder: docs/_docs
+    match: '**/*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: string
+        name: key
+        label: Key
+  post:
+    type: page
+    label: Post
+    folder: docs/_posts
+    match:
+      - 2015-01-01-article-with-long-toc.md
+      - 2015-01-03-article-with-lots-images.md
+      - 2015-02-02-very-long-title.md
+      - 2016-05-02-horizontal-rules.md
+      - 2016-05-04-footnote.md
+      - 2016-05-05-definition.md
+      - 2016-05-08-blockquotes.md
+      - 2016-06-06-lists.md
+      - 2016-06-10-tables.md
+      - 2016-06-16-code-blocks.md
+      - 2016-07-07-images.md
+      - 2016-09-01-links.md
+      - 2016-09-09-emphasis.md
+      - 2016-09-19-headers.md
+      - 2016-10-10-paragraphs.md
+      - 2017-04-15-author.md
+      - 2017-04-19-modify-date.md
+      - 2017-05-05-chart.md
+      - 2017-06-06-mermaid.md
+      - 2017-08-02-extensions.md
+      - 2017-08-08-additional-styles.md
+      - 2019-10-09-what-next.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: number
+        name: key
+        label: Key
+        subtype: int
+      - type: string
+        name: tags
+        label: Tags
+      - type: date
+        name: modify_date
+        label: Modify Date
+      - type: string
+        name: author
+        label: Author
+      - type: boolean
+        name: show_author_profile
+        label: Show Author Profile
+      - type: boolean
+        name: chart
+        label: Chart
+      - type: boolean
+        name: mermaid
+        label: Mermaid
+  post_1:
+    type: page
+    label: Post 1
+    folder: docs/_posts
+    match:
+      - 2015-01-06-punctuation-characters'.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: number
+        name: key
+        label: Key
+        subtype: int
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+  post_2:
+    type: page
+    label: Post 2
+    folder: docs/_posts
+    match:
+      - 2017-07-07-mathjax.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: number
+        name: key
+        label: Key
+        subtype: int
+      - type: string
+        name: tags
+        label: Tags
+      - type: boolean
+        name: mathjax
+        label: Mathjax
+      - type: boolean
+        name: mathjax_autoNumber
+        label: Mathjax Auto Number
+  sample_article:
+    type: page
+    label: Sample Article
+    folder: docs/_sample_articles
+    match: '*'
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: string
+        name: key
+        label: Key
+      - type: image
+        name: cover
+        label: Cover
+      - type: object
+        name: articles
+        label: Articles
+        fields:
+          - type: string
+            name: data_source
+            label: Data Source
+          - type: string
+            name: type
+            label: Type
+          - type: boolean
+            name: show_info
+            label: Show Info
+          - type: boolean
+            name: show_cover
+            label: Show Cover
+          - type: boolean
+            name: show_excerpt
+            label: Show Excerpt
+          - type: boolean
+            name: show_readmore
+            label: Show Readmore
+          - type: string
+            name: size
+            label: Size
+  page_2:
+    type: page
+    label: Page 2
+    match:
+      - docs/_sample_languages/1-english.md
+      - docs/_sample_languages/2-chinese-simplified.md
+      - docs/_sample_languages/3-chinese-traditional.md
+      - docs/_sample_languages/4-korean.md
+      - docs/_sample_languages/5-french.md
+      - docs/_sample_page/2.2-article-header-overlay-background-image.md
+      - >-
+        docs/_sample_page/2.7-article-header-overlay-background-image-header-background.md
+      - >-
+        docs/_sample_page/3.2-article-header-overlay-background-image-immersive-translucent-header.md
+      - test/about.md
+      - about.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: key
+        label: Key
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: image
+        name: cover
+        label: Cover
+      - type: string
+        name: lang
+        label: Lang
+      - type: object
+        name: header
+        label: Header
+        fields:
+          - type: string
+            name: theme
+            label: Theme
+          - type: string
+            name: background
+            label: Background
+      - type: object
+        name: article_header
+        label: Article Header
+        fields:
+          - type: string
+            name: type
+            label: Type
+          - type: object
+            name: image
+            label: Image
+            fields:
+              - type: image
+                name: src
+                label: Src
+          - type: string
+            name: theme
+            label: Theme
+          - type: string
+            name: background_color
+            label: Background Color
+          - type: object
+            name: background_image
+            label: Background Image
+            fields:
+              - type: string
+                name: gradient
+                label: Gradient
+              - type: image
+                name: src
+                label: Src
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: mode
+        label: Mode
+      - type: object
+        name: titles
+        label: Titles
+        fields:
+          - type: string
+            name: en
+            label: En
+          - type: string
+            name: en-GB
+            label: En GB
+          - type: string
+            name: en-US
+            label: En US
+          - type: string
+            name: en-CA
+            label: En CA
+          - type: string
+            name: en-AU
+            label: En AU
+          - type: string
+            name: zh-Hans
+            label: Zh Hans
+          - type: string
+            name: zh
+            label: Zh
+          - type: string
+            name: zh-CN
+            label: Zh CN
+          - type: string
+            name: zh-SG
+            label: Zh SG
+          - type: string
+            name: zh-Hant
+            label: Zh Hant
+          - type: string
+            name: zh-TW
+            label: Zh TW
+          - type: string
+            name: zh-HK
+            label: Zh HK
+          - type: string
+            name: ko
+            label: Ko
+          - type: string
+            name: ko-KR
+            label: Ko KR
+          - type: string
+            name: fr
+            label: Fr
+          - type: string
+            name: fr-BE
+            label: Fr BE
+          - type: string
+            name: fr-CA
+            label: Fr CA
+          - type: string
+            name: fr-CH
+            label: Fr CH
+          - type: string
+            name: fr-FR
+            label: Fr FR
+          - type: string
+            name: fr-LU
+            label: Fr LU
+  sample_page:
+    type: page
+    label: Sample Page
+    folder: docs/_sample_page
+    match:
+      - 1.1-single.md
+      - 1.2-aside.md
+      - 1.3-sidebar.md
+      - 1.4-sidebar+asdie.md
+      - 2.1-article-header-overlay-background-fill.md
+      - 2.5-article-header-cover-image.md
+      - 2.8-article-header-cover-image-header-background.md
+      - >-
+        3.1-article-header-overlay-background-fill-immersive-translucent-header.md
+      - 3.5-article-header-cover-image-immersive-translucent-header.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: string
+        name: key
+        label: Key
+      - type: image
+        name: cover
+        label: Cover
+      - type: object
+        name: aside
+        label: Aside
+        fields:
+          - type: boolean
+            name: toc
+            label: Toc
+      - type: object
+        name: sidebar
+        label: Sidebar
+        fields:
+          - type: string
+            name: nav
+            label: Nav
+      - type: object
+        name: article_header
+        label: Article Header
+        fields:
+          - type: string
+            name: type
+            label: Type
+          - type: string
+            name: theme
+            label: Theme
+          - type: string
+            name: background_color
+            label: Background Color
+          - type: boolean
+            name: background_image
+            label: Background Image
+          - type: object
+            name: image
+            label: Image
+            fields:
+              - type: image
+                name: src
+                label: Src
+      - type: object
+        name: header
+        label: Header
+        fields:
+          - type: string
+            name: theme
+            label: Theme
+          - type: string
+            name: background
+            label: Background
+      - type: string
+        name: mode
+        label: Mode
+  licenses:
+    type: data
+    label: Licenses
+    file: licenses.yml
+    fields:
+      - type: object
+        name: CC-BY-4.0
+        label: CC BY 4 0
+        fields:
+          - type: string
+            name: name
+            label: Name
+          - type: string
+            name: url
+            label: Url
+          - type: image
+            name: image
+            label: Image
+      - type: object
+        name: CC-BY-SA-4.0
+        label: CC BY SA 4 0
+        fields:
+          - type: string
+            name: name
+            label: Name
+          - type: string
+            name: url
+            label: Url
+          - type: image
+            name: image
+            label: Image
+      - type: object
+        name: CC-BY-NC-4.0
+        label: CC BY NC 4 0
+        fields:
+          - type: string
+            name: name
+            label: Name
+          - type: string
+            name: url
+            label: Url
+          - type: image
+            name: image
+            label: Image
+      - type: object
+        name: CC-BY-ND-4.0
+        label: CC BY ND 4 0
+        fields:
+          - type: string
+            name: name
+            label: Name
+          - type: string
+            name: url
+            label: Url
+          - type: image
+            name: image
+            label: Image
+  locale:
+    type: data
+    label: Locale
+    file: locale.yml
+    fields:
+      - type: object
+        name: en
+        label: En
+        fields:
+          - type: string
+            name: SUBSCRIBE
+            label: SUBSCRIBE
+          - type: string
+            name: READMORE
+            label: READMORE
+          - type: string
+            name: SEARCH
+            label: SEARCH
+          - type: string
+            name: CANCEL
+            label: CANCEL
+          - type: string
+            name: VIEWS
+            label: VIEWS
+          - type: string
+            name: LAST_UPDATED
+            label: LAST UPDATED
+          - type: string
+            name: PREVIOUS
+            label: PREVIOUS
+          - type: string
+            name: NEXT
+            label: NEXT
+          - type: string
+            name: ARTICLE_DATE_FORMAT
+            label: ARTICLE DATE FORMAT
+          - type: string
+            name: ARTICLE_LIST_DATE_FORMAT
+            label: ARTICLE LIST DATE FORMAT
+          - type: string
+            name: STATISTICS
+            label: STATISTICS
+          - type: string
+            name: LICENSE_ANNOUNCE
+            label: LICENSE ANNOUNCE
+          - type: string
+            name: POST_ON_GITHUB
+            label: POST ON GITHUB
+          - type: string
+            name: FOLLOW_ME
+            label: FOLLOW ME
+          - type: string
+            name: FOLLOW_US
+            label: FOLLOW US
+          - type: string
+            name: EMAIL_ME
+            label: EMAIL ME
+          - type: string
+            name: EMAIL_US
+            label: EMAIL US
+          - type: date
+            name: COPYRIGHT_DATES
+            label: COPYRIGHT DATES
+      - type: object
+        name: en-GB
+        label: En GB
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: string
+                name: SUBSCRIBE
+                label: SUBSCRIBE
+              - type: string
+                name: READMORE
+                label: READMORE
+              - type: string
+                name: SEARCH
+                label: SEARCH
+              - type: string
+                name: CANCEL
+                label: CANCEL
+              - type: string
+                name: VIEWS
+                label: VIEWS
+              - type: string
+                name: LAST_UPDATED
+                label: LAST UPDATED
+              - type: string
+                name: PREVIOUS
+                label: PREVIOUS
+              - type: string
+                name: NEXT
+                label: NEXT
+              - type: string
+                name: ARTICLE_DATE_FORMAT
+                label: ARTICLE DATE FORMAT
+              - type: string
+                name: ARTICLE_LIST_DATE_FORMAT
+                label: ARTICLE LIST DATE FORMAT
+              - type: string
+                name: STATISTICS
+                label: STATISTICS
+              - type: string
+                name: LICENSE_ANNOUNCE
+                label: LICENSE ANNOUNCE
+              - type: string
+                name: POST_ON_GITHUB
+                label: POST ON GITHUB
+              - type: string
+                name: FOLLOW_ME
+                label: FOLLOW ME
+              - type: string
+                name: FOLLOW_US
+                label: FOLLOW US
+              - type: string
+                name: EMAIL_ME
+                label: EMAIL ME
+              - type: string
+                name: EMAIL_US
+                label: EMAIL US
+              - type: date
+                name: COPYRIGHT_DATES
+                label: COPYRIGHT DATES
+      - type: object
+        name: en-US
+        label: En US
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: string
+                name: SUBSCRIBE
+                label: SUBSCRIBE
+              - type: string
+                name: READMORE
+                label: READMORE
+              - type: string
+                name: SEARCH
+                label: SEARCH
+              - type: string
+                name: CANCEL
+                label: CANCEL
+              - type: string
+                name: VIEWS
+                label: VIEWS
+              - type: string
+                name: LAST_UPDATED
+                label: LAST UPDATED
+              - type: string
+                name: PREVIOUS
+                label: PREVIOUS
+              - type: string
+                name: NEXT
+                label: NEXT
+              - type: string
+                name: ARTICLE_DATE_FORMAT
+                label: ARTICLE DATE FORMAT
+              - type: string
+                name: ARTICLE_LIST_DATE_FORMAT
+                label: ARTICLE LIST DATE FORMAT
+              - type: string
+                name: STATISTICS
+                label: STATISTICS
+              - type: string
+                name: LICENSE_ANNOUNCE
+                label: LICENSE ANNOUNCE
+              - type: string
+                name: POST_ON_GITHUB
+                label: POST ON GITHUB
+              - type: string
+                name: FOLLOW_ME
+                label: FOLLOW ME
+              - type: string
+                name: FOLLOW_US
+                label: FOLLOW US
+              - type: string
+                name: EMAIL_ME
+                label: EMAIL ME
+              - type: string
+                name: EMAIL_US
+                label: EMAIL US
+              - type: date
+                name: COPYRIGHT_DATES
+                label: COPYRIGHT DATES
+      - type: object
+        name: en-CA
+        label: En CA
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: string
+                name: SUBSCRIBE
+                label: SUBSCRIBE
+              - type: string
+                name: READMORE
+                label: READMORE
+              - type: string
+                name: SEARCH
+                label: SEARCH
+              - type: string
+                name: CANCEL
+                label: CANCEL
+              - type: string
+                name: VIEWS
+                label: VIEWS
+              - type: string
+                name: LAST_UPDATED
+                label: LAST UPDATED
+              - type: string
+                name: PREVIOUS
+                label: PREVIOUS
+              - type: string
+                name: NEXT
+                label: NEXT
+              - type: string
+                name: ARTICLE_DATE_FORMAT
+                label: ARTICLE DATE FORMAT
+              - type: string
+                name: ARTICLE_LIST_DATE_FORMAT
+                label: ARTICLE LIST DATE FORMAT
+              - type: string
+                name: STATISTICS
+                label: STATISTICS
+              - type: string
+                name: LICENSE_ANNOUNCE
+                label: LICENSE ANNOUNCE
+              - type: string
+                name: POST_ON_GITHUB
+                label: POST ON GITHUB
+              - type: string
+                name: FOLLOW_ME
+                label: FOLLOW ME
+              - type: string
+                name: FOLLOW_US
+                label: FOLLOW US
+              - type: string
+                name: EMAIL_ME
+                label: EMAIL ME
+              - type: string
+                name: EMAIL_US
+                label: EMAIL US
+              - type: date
+                name: COPYRIGHT_DATES
+                label: COPYRIGHT DATES
+      - type: object
+        name: en-AU
+        label: En AU
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: string
+                name: SUBSCRIBE
+                label: SUBSCRIBE
+              - type: string
+                name: READMORE
+                label: READMORE
+              - type: string
+                name: SEARCH
+                label: SEARCH
+              - type: string
+                name: CANCEL
+                label: CANCEL
+              - type: string
+                name: VIEWS
+                label: VIEWS
+              - type: string
+                name: LAST_UPDATED
+                label: LAST UPDATED
+              - type: string
+                name: PREVIOUS
+                label: PREVIOUS
+              - type: string
+                name: NEXT
+                label: NEXT
+              - type: string
+                name: ARTICLE_DATE_FORMAT
+                label: ARTICLE DATE FORMAT
+              - type: string
+                name: ARTICLE_LIST_DATE_FORMAT
+                label: ARTICLE LIST DATE FORMAT
+              - type: string
+                name: STATISTICS
+                label: STATISTICS
+              - type: string
+                name: LICENSE_ANNOUNCE
+                label: LICENSE ANNOUNCE
+              - type: string
+                name: POST_ON_GITHUB
+                label: POST ON GITHUB
+              - type: string
+                name: FOLLOW_ME
+                label: FOLLOW ME
+              - type: string
+                name: FOLLOW_US
+                label: FOLLOW US
+              - type: string
+                name: EMAIL_ME
+                label: EMAIL ME
+              - type: string
+                name: EMAIL_US
+                label: EMAIL US
+              - type: date
+                name: COPYRIGHT_DATES
+                label: COPYRIGHT DATES
+      - type: object
+        name: zh-Hans
+        label: Zh Hans
+        fields:
+          - type: string
+            name: SUBSCRIBE
+            label: SUBSCRIBE
+          - type: string
+            name: READMORE
+            label: READMORE
+          - type: string
+            name: SEARCH
+            label: SEARCH
+          - type: string
+            name: CANCEL
+            label: CANCEL
+          - type: string
+            name: VIEWS
+            label: VIEWS
+          - type: string
+            name: LAST_UPDATED
+            label: LAST UPDATED
+          - type: string
+            name: PREVIOUS
+            label: PREVIOUS
+          - type: string
+            name: NEXT
+            label: NEXT
+          - type: string
+            name: ARTICLE_DATE_FORMAT
+            label: ARTICLE DATE FORMAT
+          - type: string
+            name: ARTICLE_LIST_DATE_FORMAT
+            label: ARTICLE LIST DATE FORMAT
+          - type: string
+            name: STATISTICS
+            label: STATISTICS
+          - type: string
+            name: LICENSE_ANNOUNCE
+            label: LICENSE ANNOUNCE
+          - type: string
+            name: POST_ON_GITHUB
+            label: POST ON GITHUB
+          - type: string
+            name: FOLLOW_ME
+            label: FOLLOW ME
+          - type: string
+            name: FOLLOW_US
+            label: FOLLOW US
+          - type: string
+            name: EMAIL_ME
+            label: EMAIL ME
+          - type: string
+            name: EMAIL_US
+            label: EMAIL US
+          - type: date
+            name: COPYRIGHT_DATES
+            label: COPYRIGHT DATES
+      - type: object
+        name: zh
+        label: Zh
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: string
+                name: SUBSCRIBE
+                label: SUBSCRIBE
+              - type: string
+                name: READMORE
+                label: READMORE
+              - type: string
+                name: SEARCH
+                label: SEARCH
+              - type: string
+                name: CANCEL
+                label: CANCEL
+              - type: string
+                name: VIEWS
+                label: VIEWS
+              - type: string
+                name: LAST_UPDATED
+                label: LAST UPDATED
+              - type: string
+                name: PREVIOUS
+                label: PREVIOUS
+              - type: string
+                name: NEXT
+                label: NEXT
+              - type: string
+                name: ARTICLE_DATE_FORMAT
+                label: ARTICLE DATE FORMAT
+              - type: string
+                name: ARTICLE_LIST_DATE_FORMAT
+                label: ARTICLE LIST DATE FORMAT
+              - type: string
+                name: STATISTICS
+                label: STATISTICS
+              - type: string
+                name: LICENSE_ANNOUNCE
+                label: LICENSE ANNOUNCE
+              - type: string
+                name: POST_ON_GITHUB
+                label: POST ON GITHUB
+              - type: string
+                name: FOLLOW_ME
+                label: FOLLOW ME
+              - type: string
+                name: FOLLOW_US
+                label: FOLLOW US
+              - type: string
+                name: EMAIL_ME
+                label: EMAIL ME
+              - type: string
+                name: EMAIL_US
+                label: EMAIL US
+              - type: date
+                name: COPYRIGHT_DATES
+                label: COPYRIGHT DATES
+      - type: object
+        name: zh-CN
+        label: Zh CN
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: string
+                name: SUBSCRIBE
+                label: SUBSCRIBE
+              - type: string
+                name: READMORE
+                label: READMORE
+              - type: string
+                name: SEARCH
+                label: SEARCH
+              - type: string
+                name: CANCEL
+                label: CANCEL
+              - type: string
+                name: VIEWS
+                label: VIEWS
+              - type: string
+                name: LAST_UPDATED
+                label: LAST UPDATED
+              - type: string
+                name: PREVIOUS
+                label: PREVIOUS
+              - type: string
+                name: NEXT
+                label: NEXT
+              - type: string
+                name: ARTICLE_DATE_FORMAT
+                label: ARTICLE DATE FORMAT
+              - type: string
+                name: ARTICLE_LIST_DATE_FORMAT
+                label: ARTICLE LIST DATE FORMAT
+              - type: string
+                name: STATISTICS
+                label: STATISTICS
+              - type: string
+                name: LICENSE_ANNOUNCE
+                label: LICENSE ANNOUNCE
+              - type: string
+                name: POST_ON_GITHUB
+                label: POST ON GITHUB
+              - type: string
+                name: FOLLOW_ME
+                label: FOLLOW ME
+              - type: string
+                name: FOLLOW_US
+                label: FOLLOW US
+              - type: string
+                name: EMAIL_ME
+                label: EMAIL ME
+              - type: string
+                name: EMAIL_US
+                label: EMAIL US
+              - type: date
+                name: COPYRIGHT_DATES
+                label: COPYRIGHT DATES
+      - type: object
+        name: zh-SG
+        label: Zh SG
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: string
+                name: SUBSCRIBE
+                label: SUBSCRIBE
+              - type: string
+                name: READMORE
+                label: READMORE
+              - type: string
+                name: SEARCH
+                label: SEARCH
+              - type: string
+                name: CANCEL
+                label: CANCEL
+              - type: string
+                name: VIEWS
+                label: VIEWS
+              - type: string
+                name: LAST_UPDATED
+                label: LAST UPDATED
+              - type: string
+                name: PREVIOUS
+                label: PREVIOUS
+              - type: string
+                name: NEXT
+                label: NEXT
+              - type: string
+                name: ARTICLE_DATE_FORMAT
+                label: ARTICLE DATE FORMAT
+              - type: string
+                name: ARTICLE_LIST_DATE_FORMAT
+                label: ARTICLE LIST DATE FORMAT
+              - type: string
+                name: STATISTICS
+                label: STATISTICS
+              - type: string
+                name: LICENSE_ANNOUNCE
+                label: LICENSE ANNOUNCE
+              - type: string
+                name: POST_ON_GITHUB
+                label: POST ON GITHUB
+              - type: string
+                name: FOLLOW_ME
+                label: FOLLOW ME
+              - type: string
+                name: FOLLOW_US
+                label: FOLLOW US
+              - type: string
+                name: EMAIL_ME
+                label: EMAIL ME
+              - type: string
+                name: EMAIL_US
+                label: EMAIL US
+              - type: date
+                name: COPYRIGHT_DATES
+                label: COPYRIGHT DATES
+      - type: object
+        name: zh-Hant
+        label: Zh Hant
+        fields:
+          - type: string
+            name: SUBSCRIBE
+            label: SUBSCRIBE
+          - type: string
+            name: READMORE
+            label: READMORE
+          - type: string
+            name: SEARCH
+            label: SEARCH
+          - type: string
+            name: CANCEL
+            label: CANCEL
+          - type: string
+            name: VIEWS
+            label: VIEWS
+          - type: string
+            name: LAST_UPDATED
+            label: LAST UPDATED
+          - type: string
+            name: PREVIOUS
+            label: PREVIOUS
+          - type: string
+            name: NEXT
+            label: NEXT
+          - type: string
+            name: ARTICLE_DATE_FORMAT
+            label: ARTICLE DATE FORMAT
+          - type: string
+            name: ARTICLE_LIST_DATE_FORMAT
+            label: ARTICLE LIST DATE FORMAT
+          - type: string
+            name: STATISTICS
+            label: STATISTICS
+          - type: string
+            name: LICENSE_ANNOUNCE
+            label: LICENSE ANNOUNCE
+          - type: string
+            name: POST_ON_GITHUB
+            label: POST ON GITHUB
+          - type: string
+            name: FOLLOW_ME
+            label: FOLLOW ME
+          - type: string
+            name: FOLLOW_US
+            label: FOLLOW US
+          - type: string
+            name: EMAIL_ME
+            label: EMAIL ME
+          - type: string
+            name: EMAIL_US
+            label: EMAIL US
+          - type: date
+            name: COPYRIGHT_DATES
+            label: COPYRIGHT DATES
+      - type: object
+        name: zh-TW
+        label: Zh TW
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: string
+                name: SUBSCRIBE
+                label: SUBSCRIBE
+              - type: string
+                name: READMORE
+                label: READMORE
+              - type: string
+                name: SEARCH
+                label: SEARCH
+              - type: string
+                name: CANCEL
+                label: CANCEL
+              - type: string
+                name: VIEWS
+                label: VIEWS
+              - type: string
+                name: LAST_UPDATED
+                label: LAST UPDATED
+              - type: string
+                name: PREVIOUS
+                label: PREVIOUS
+              - type: string
+                name: NEXT
+                label: NEXT
+              - type: string
+                name: ARTICLE_DATE_FORMAT
+                label: ARTICLE DATE FORMAT
+              - type: string
+                name: ARTICLE_LIST_DATE_FORMAT
+                label: ARTICLE LIST DATE FORMAT
+              - type: string
+                name: STATISTICS
+                label: STATISTICS
+              - type: string
+                name: LICENSE_ANNOUNCE
+                label: LICENSE ANNOUNCE
+              - type: string
+                name: POST_ON_GITHUB
+                label: POST ON GITHUB
+              - type: string
+                name: FOLLOW_ME
+                label: FOLLOW ME
+              - type: string
+                name: FOLLOW_US
+                label: FOLLOW US
+              - type: string
+                name: EMAIL_ME
+                label: EMAIL ME
+              - type: string
+                name: EMAIL_US
+                label: EMAIL US
+              - type: date
+                name: COPYRIGHT_DATES
+                label: COPYRIGHT DATES
+      - type: object
+        name: zh-HK
+        label: Zh HK
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: string
+                name: SUBSCRIBE
+                label: SUBSCRIBE
+              - type: string
+                name: READMORE
+                label: READMORE
+              - type: string
+                name: SEARCH
+                label: SEARCH
+              - type: string
+                name: CANCEL
+                label: CANCEL
+              - type: string
+                name: VIEWS
+                label: VIEWS
+              - type: string
+                name: LAST_UPDATED
+                label: LAST UPDATED
+              - type: string
+                name: PREVIOUS
+                label: PREVIOUS
+              - type: string
+                name: NEXT
+                label: NEXT
+              - type: string
+                name: ARTICLE_DATE_FORMAT
+                label: ARTICLE DATE FORMAT
+              - type: string
+                name: ARTICLE_LIST_DATE_FORMAT
+                label: ARTICLE LIST DATE FORMAT
+              - type: string
+                name: STATISTICS
+                label: STATISTICS
+              - type: string
+                name: LICENSE_ANNOUNCE
+                label: LICENSE ANNOUNCE
+              - type: string
+                name: POST_ON_GITHUB
+                label: POST ON GITHUB
+              - type: string
+                name: FOLLOW_ME
+                label: FOLLOW ME
+              - type: string
+                name: FOLLOW_US
+                label: FOLLOW US
+              - type: string
+                name: EMAIL_ME
+                label: EMAIL ME
+              - type: string
+                name: EMAIL_US
+                label: EMAIL US
+              - type: date
+                name: COPYRIGHT_DATES
+                label: COPYRIGHT DATES
+      - type: object
+        name: ko
+        label: Ko
+        fields:
+          - type: string
+            name: SUBSCRIBE
+            label: SUBSCRIBE
+          - type: string
+            name: READMORE
+            label: READMORE
+          - type: string
+            name: SEARCH
+            label: SEARCH
+          - type: string
+            name: CANCEL
+            label: CANCEL
+          - type: string
+            name: VIEWS
+            label: VIEWS
+          - type: string
+            name: LAST_UPDATED
+            label: LAST UPDATED
+          - type: string
+            name: PREVIOUS
+            label: PREVIOUS
+          - type: string
+            name: NEXT
+            label: NEXT
+          - type: string
+            name: ARTICLE_DATE_FORMAT
+            label: ARTICLE DATE FORMAT
+          - type: string
+            name: ARTICLE_LIST_DATE_FORMAT
+            label: ARTICLE LIST DATE FORMAT
+          - type: string
+            name: STATISTICS
+            label: STATISTICS
+          - type: string
+            name: LICENSE_ANNOUNCE
+            label: LICENSE ANNOUNCE
+          - type: string
+            name: POST_ON_GITHUB
+            label: POST ON GITHUB
+          - type: string
+            name: FOLLOW_ME
+            label: FOLLOW ME
+          - type: string
+            name: FOLLOW_US
+            label: FOLLOW US
+          - type: string
+            name: EMAIL_ME
+            label: EMAIL ME
+          - type: string
+            name: EMAIL_US
+            label: EMAIL US
+          - type: date
+            name: COPYRIGHT_DATES
+            label: COPYRIGHT DATES
+      - type: object
+        name: ko-KR
+        label: Ko KR
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: string
+                name: SUBSCRIBE
+                label: SUBSCRIBE
+              - type: string
+                name: READMORE
+                label: READMORE
+              - type: string
+                name: SEARCH
+                label: SEARCH
+              - type: string
+                name: CANCEL
+                label: CANCEL
+              - type: string
+                name: VIEWS
+                label: VIEWS
+              - type: string
+                name: LAST_UPDATED
+                label: LAST UPDATED
+              - type: string
+                name: PREVIOUS
+                label: PREVIOUS
+              - type: string
+                name: NEXT
+                label: NEXT
+              - type: string
+                name: ARTICLE_DATE_FORMAT
+                label: ARTICLE DATE FORMAT
+              - type: string
+                name: ARTICLE_LIST_DATE_FORMAT
+                label: ARTICLE LIST DATE FORMAT
+              - type: string
+                name: STATISTICS
+                label: STATISTICS
+              - type: string
+                name: LICENSE_ANNOUNCE
+                label: LICENSE ANNOUNCE
+              - type: string
+                name: POST_ON_GITHUB
+                label: POST ON GITHUB
+              - type: string
+                name: FOLLOW_ME
+                label: FOLLOW ME
+              - type: string
+                name: FOLLOW_US
+                label: FOLLOW US
+              - type: string
+                name: EMAIL_ME
+                label: EMAIL ME
+              - type: string
+                name: EMAIL_US
+                label: EMAIL US
+              - type: date
+                name: COPYRIGHT_DATES
+                label: COPYRIGHT DATES
+      - type: object
+        name: fr
+        label: Fr
+        fields:
+          - type: string
+            name: SUBSCRIBE
+            label: SUBSCRIBE
+          - type: string
+            name: READMORE
+            label: READMORE
+          - type: string
+            name: SEARCH
+            label: SEARCH
+          - type: string
+            name: CANCEL
+            label: CANCEL
+          - type: string
+            name: VIEWS
+            label: VIEWS
+          - type: string
+            name: LAST_UPDATED
+            label: LAST UPDATED
+          - type: string
+            name: PREVIOUS
+            label: PREVIOUS
+          - type: string
+            name: NEXT
+            label: NEXT
+          - type: string
+            name: ARTICLE_DATE_FORMAT
+            label: ARTICLE DATE FORMAT
+          - type: string
+            name: ARTICLE_LIST_DATE_FORMAT
+            label: ARTICLE LIST DATE FORMAT
+          - type: string
+            name: STATISTICS
+            label: STATISTICS
+          - type: string
+            name: LICENSE_ANNOUNCE
+            label: LICENSE ANNOUNCE
+          - type: string
+            name: POST_ON_GITHUB
+            label: POST ON GITHUB
+          - type: string
+            name: FOLLOW_ME
+            label: FOLLOW ME
+          - type: string
+            name: FOLLOW_US
+            label: FOLLOW US
+          - type: string
+            name: EMAIL_ME
+            label: EMAIL ME
+          - type: string
+            name: EMAIL_US
+            label: EMAIL US
+          - type: date
+            name: COPYRIGHT_DATES
+            label: COPYRIGHT DATES
+          - type: string
+            name: DONATE
+            label: DONATE
+      - type: object
+        name: fr-BE
+        label: Fr BE
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: string
+                name: SUBSCRIBE
+                label: SUBSCRIBE
+              - type: string
+                name: READMORE
+                label: READMORE
+              - type: string
+                name: SEARCH
+                label: SEARCH
+              - type: string
+                name: CANCEL
+                label: CANCEL
+              - type: string
+                name: VIEWS
+                label: VIEWS
+              - type: string
+                name: LAST_UPDATED
+                label: LAST UPDATED
+              - type: string
+                name: PREVIOUS
+                label: PREVIOUS
+              - type: string
+                name: NEXT
+                label: NEXT
+              - type: string
+                name: ARTICLE_DATE_FORMAT
+                label: ARTICLE DATE FORMAT
+              - type: string
+                name: ARTICLE_LIST_DATE_FORMAT
+                label: ARTICLE LIST DATE FORMAT
+              - type: string
+                name: STATISTICS
+                label: STATISTICS
+              - type: string
+                name: LICENSE_ANNOUNCE
+                label: LICENSE ANNOUNCE
+              - type: string
+                name: POST_ON_GITHUB
+                label: POST ON GITHUB
+              - type: string
+                name: FOLLOW_ME
+                label: FOLLOW ME
+              - type: string
+                name: FOLLOW_US
+                label: FOLLOW US
+              - type: string
+                name: EMAIL_ME
+                label: EMAIL ME
+              - type: string
+                name: EMAIL_US
+                label: EMAIL US
+              - type: date
+                name: COPYRIGHT_DATES
+                label: COPYRIGHT DATES
+              - type: string
+                name: DONATE
+                label: DONATE
+      - type: object
+        name: fr-CA
+        label: Fr CA
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: string
+                name: SUBSCRIBE
+                label: SUBSCRIBE
+              - type: string
+                name: READMORE
+                label: READMORE
+              - type: string
+                name: SEARCH
+                label: SEARCH
+              - type: string
+                name: CANCEL
+                label: CANCEL
+              - type: string
+                name: VIEWS
+                label: VIEWS
+              - type: string
+                name: LAST_UPDATED
+                label: LAST UPDATED
+              - type: string
+                name: PREVIOUS
+                label: PREVIOUS
+              - type: string
+                name: NEXT
+                label: NEXT
+              - type: string
+                name: ARTICLE_DATE_FORMAT
+                label: ARTICLE DATE FORMAT
+              - type: string
+                name: ARTICLE_LIST_DATE_FORMAT
+                label: ARTICLE LIST DATE FORMAT
+              - type: string
+                name: STATISTICS
+                label: STATISTICS
+              - type: string
+                name: LICENSE_ANNOUNCE
+                label: LICENSE ANNOUNCE
+              - type: string
+                name: POST_ON_GITHUB
+                label: POST ON GITHUB
+              - type: string
+                name: FOLLOW_ME
+                label: FOLLOW ME
+              - type: string
+                name: FOLLOW_US
+                label: FOLLOW US
+              - type: string
+                name: EMAIL_ME
+                label: EMAIL ME
+              - type: string
+                name: EMAIL_US
+                label: EMAIL US
+              - type: date
+                name: COPYRIGHT_DATES
+                label: COPYRIGHT DATES
+              - type: string
+                name: DONATE
+                label: DONATE
+      - type: object
+        name: fr-CH
+        label: Fr CH
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: string
+                name: SUBSCRIBE
+                label: SUBSCRIBE
+              - type: string
+                name: READMORE
+                label: READMORE
+              - type: string
+                name: SEARCH
+                label: SEARCH
+              - type: string
+                name: CANCEL
+                label: CANCEL
+              - type: string
+                name: VIEWS
+                label: VIEWS
+              - type: string
+                name: LAST_UPDATED
+                label: LAST UPDATED
+              - type: string
+                name: PREVIOUS
+                label: PREVIOUS
+              - type: string
+                name: NEXT
+                label: NEXT
+              - type: string
+                name: ARTICLE_DATE_FORMAT
+                label: ARTICLE DATE FORMAT
+              - type: string
+                name: ARTICLE_LIST_DATE_FORMAT
+                label: ARTICLE LIST DATE FORMAT
+              - type: string
+                name: STATISTICS
+                label: STATISTICS
+              - type: string
+                name: LICENSE_ANNOUNCE
+                label: LICENSE ANNOUNCE
+              - type: string
+                name: POST_ON_GITHUB
+                label: POST ON GITHUB
+              - type: string
+                name: FOLLOW_ME
+                label: FOLLOW ME
+              - type: string
+                name: FOLLOW_US
+                label: FOLLOW US
+              - type: string
+                name: EMAIL_ME
+                label: EMAIL ME
+              - type: string
+                name: EMAIL_US
+                label: EMAIL US
+              - type: date
+                name: COPYRIGHT_DATES
+                label: COPYRIGHT DATES
+              - type: string
+                name: DONATE
+                label: DONATE
+      - type: object
+        name: fr-FR
+        label: Fr FR
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: string
+                name: SUBSCRIBE
+                label: SUBSCRIBE
+              - type: string
+                name: READMORE
+                label: READMORE
+              - type: string
+                name: SEARCH
+                label: SEARCH
+              - type: string
+                name: CANCEL
+                label: CANCEL
+              - type: string
+                name: VIEWS
+                label: VIEWS
+              - type: string
+                name: LAST_UPDATED
+                label: LAST UPDATED
+              - type: string
+                name: PREVIOUS
+                label: PREVIOUS
+              - type: string
+                name: NEXT
+                label: NEXT
+              - type: string
+                name: ARTICLE_DATE_FORMAT
+                label: ARTICLE DATE FORMAT
+              - type: string
+                name: ARTICLE_LIST_DATE_FORMAT
+                label: ARTICLE LIST DATE FORMAT
+              - type: string
+                name: STATISTICS
+                label: STATISTICS
+              - type: string
+                name: LICENSE_ANNOUNCE
+                label: LICENSE ANNOUNCE
+              - type: string
+                name: POST_ON_GITHUB
+                label: POST ON GITHUB
+              - type: string
+                name: FOLLOW_ME
+                label: FOLLOW ME
+              - type: string
+                name: FOLLOW_US
+                label: FOLLOW US
+              - type: string
+                name: EMAIL_ME
+                label: EMAIL ME
+              - type: string
+                name: EMAIL_US
+                label: EMAIL US
+              - type: date
+                name: COPYRIGHT_DATES
+                label: COPYRIGHT DATES
+              - type: string
+                name: DONATE
+                label: DONATE
+      - type: object
+        name: fr-LU
+        label: Fr LU
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: string
+                name: SUBSCRIBE
+                label: SUBSCRIBE
+              - type: string
+                name: READMORE
+                label: READMORE
+              - type: string
+                name: SEARCH
+                label: SEARCH
+              - type: string
+                name: CANCEL
+                label: CANCEL
+              - type: string
+                name: VIEWS
+                label: VIEWS
+              - type: string
+                name: LAST_UPDATED
+                label: LAST UPDATED
+              - type: string
+                name: PREVIOUS
+                label: PREVIOUS
+              - type: string
+                name: NEXT
+                label: NEXT
+              - type: string
+                name: ARTICLE_DATE_FORMAT
+                label: ARTICLE DATE FORMAT
+              - type: string
+                name: ARTICLE_LIST_DATE_FORMAT
+                label: ARTICLE LIST DATE FORMAT
+              - type: string
+                name: STATISTICS
+                label: STATISTICS
+              - type: string
+                name: LICENSE_ANNOUNCE
+                label: LICENSE ANNOUNCE
+              - type: string
+                name: POST_ON_GITHUB
+                label: POST ON GITHUB
+              - type: string
+                name: FOLLOW_ME
+                label: FOLLOW ME
+              - type: string
+                name: FOLLOW_US
+                label: FOLLOW US
+              - type: string
+                name: EMAIL_ME
+                label: EMAIL ME
+              - type: string
+                name: EMAIL_US
+                label: EMAIL US
+              - type: date
+                name: COPYRIGHT_DATES
+                label: COPYRIGHT DATES
+              - type: string
+                name: DONATE
+                label: DONATE
+  navigation:
+    type: data
+    label: Navigation
+    file: navigation.yml
+    fields:
+      - type: list
+        name: header
+        label: Header
+        items:
+          type: object
+          fields:
+            - type: object
+              name: titles
+              label: Titles
+              fields:
+                - type: string
+                  name: en
+                  label: En
+                - type: string
+                  name: en-GB
+                  label: En GB
+                - type: string
+                  name: en-US
+                  label: En US
+                - type: string
+                  name: en-CA
+                  label: En CA
+                - type: string
+                  name: en-AU
+                  label: En AU
+                - type: string
+                  name: zh-Hans
+                  label: Zh Hans
+                - type: string
+                  name: zh
+                  label: Zh
+                - type: string
+                  name: zh-CN
+                  label: Zh CN
+                - type: string
+                  name: zh-SG
+                  label: Zh SG
+                - type: string
+                  name: zh-Hant
+                  label: Zh Hant
+                - type: string
+                  name: zh-TW
+                  label: Zh TW
+                - type: string
+                  name: zh-HK
+                  label: Zh HK
+                - type: string
+                  name: ko
+                  label: Ko
+                - type: string
+                  name: ko-KR
+                  label: Ko KR
+                - type: string
+                  name: fr
+                  label: Fr
+                - type: string
+                  name: fr-BE
+                  label: Fr BE
+                - type: string
+                  name: fr-CA
+                  label: Fr CA
+                - type: string
+                  name: fr-CH
+                  label: Fr CH
+                - type: string
+                  name: fr-FR
+                  label: Fr FR
+                - type: string
+                  name: fr-LU
+                  label: Fr LU
+            - type: string
+              name: url
+              label: Url
+  variables:
+    type: data
+    label: Variables
+    file: variables.yml
+    fields:
+      - type: object
+        name: default
+        label: Default
+        fields:
+          - type: string
+            name: text_skin
+            label: Text Skin
+          - type: string
+            name: highlight_theme
+            label: Highlight Theme
+          - type: string
+            name: lang
+            label: Lang
+          - type: object
+            name: paths
+            label: Paths
+            fields:
+              - type: string
+                name: root
+                label: Root
+              - type: string
+                name: home
+                label: Home
+              - type: string
+                name: archive
+                label: Archive
+              - type: string
+                name: rss
+                label: Rss
+          - type: boolean
+            name: mathjax
+            label: Mathjax
+          - type: boolean
+            name: mathjax_autoNumber
+            label: Mathjax Auto Number
+          - type: boolean
+            name: mermaid
+            label: Mermaid
+          - type: boolean
+            name: chart
+            label: Chart
+          - type: object
+            name: toc
+            label: Toc
+            fields:
+              - type: string
+                name: selectors
+                label: Selectors
+          - type: string
+            name: sources
+            label: Sources
+          - type: object
+            name: page
+            label: Page
+            fields:
+              - type: string
+                name: mode
+                label: Mode
+              - type: string
+                name: type
+                label: Type
+              - type: object
+                name: article_header
+                label: Article Header
+                fields:
+                  - type: string
+                    name: align
+                    label: Align
+                  - type: string
+                    name: theme
+                    label: Theme
+              - type: object
+                name: articles
+                label: Articles
+                fields:
+                  - type: boolean
+                    name: show_cover
+                    label: Show Cover
+                  - type: boolean
+                    name: show_excerpt
+                    label: Show Excerpt
+                  - type: boolean
+                    name: show_readmore
+                    label: Show Readmore
+                  - type: boolean
+                    name: show_info
+                    label: Show Info
+              - type: boolean
+                name: show_title
+                label: Show Title
+              - type: boolean
+                name: show_edit_on_github
+                label: Show Edit On Github
+              - type: boolean
+                name: show_date
+                label: Show Date
+              - type: boolean
+                name: show_tags
+                label: Show Tags
+              - type: boolean
+                name: show_author_profile
+                label: Show Author Profile
+              - type: boolean
+                name: show_subscribe
+                label: Show Subscribe
+              - type: boolean
+                name: full_width
+                label: Full Width
+              - type: boolean
+                name: sharing
+                label: Sharing
+              - type: boolean
+                name: comment
+                label: Comment
+              - type: boolean
+                name: license
+                label: License
+              - type: boolean
+                name: pageview
+                label: Pageview
+              - type: string
+                name: search
+                label: Search
+      - type: object
+        name: sources
+        label: Sources
+        fields:
+          - type: object
+            name: bootcdn
+            label: Bootcdn
+            fields:
+              - type: string
+                name: font_awesome
+                label: Font Awesome
+              - type: string
+                name: jquery
+                label: Jquery
+              - type: string
+                name: leancloud_js_sdk
+                label: Leancloud Js Sdk
+              - type: string
+                name: chart
+                label: Chart
+              - type: object
+                name: gitalk
+                label: Gitalk
+                fields:
+                  - type: string
+                    name: js
+                    label: Js
+                  - type: string
+                    name: css
+                    label: Css
+              - type: string
+                name: valine
+                label: Valine
+              - type: string
+                name: mathjax
+                label: Mathjax
+              - type: string
+                name: mermaid
+                label: Mermaid
+          - type: object
+            name: unpkg
+            label: Unpkg
+            fields:
+              - type: string
+                name: font_awesome
+                label: Font Awesome
+              - type: string
+                name: jquery
+                label: Jquery
+              - type: string
+                name: leancloud_js_sdk
+                label: Leancloud Js Sdk
+              - type: string
+                name: chart
+                label: Chart
+              - type: object
+                name: gitalk
+                label: Gitalk
+                fields:
+                  - type: string
+                    name: js
+                    label: Js
+                  - type: string
+                    name: css
+                    label: Css
+              - type: string
+                name: valine
+                label: Valine
+              - type: string
+                name: mathjax
+                label: Mathjax
+              - type: string
+                name: mermaid
+                label: Mermaid

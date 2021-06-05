@@ -1,0 +1,118 @@
+text_skin: default
+highlight_theme: default
+url: ''
+baseurl: ''
+title: Your Site Title
+description: |
+  Your Site Description
+lang: null
+timezone: null
+author:
+  type: null
+  name: Your Name
+  url: null
+  avatar: null
+  bio: I am an amazing person.
+  email: null
+  facebook: null
+  twitter: null
+  weibo: null
+  googleplus: null
+  telegram: null
+  medium: null
+  zhihu: null
+  douban: null
+  linkedin: null
+  github: null
+  npm: null
+repository: user_name/repo_name
+repository_tree: master
+paths:
+  root: null
+  home: null
+  archive: null
+  rss: null
+excerpt_separator: <!--more-->
+license: CC-BY-NC-4.0
+toc:
+  selectors: null
+mathjax: null
+mathjax_autoNumber: null
+mermaid: null
+chart: null
+paginate: 8
+paginate_path: '/page:num'
+sources: null
+sharing:
+  provider: false
+  addthis:
+    id: null
+comments:
+  provider: false
+  disqus:
+    shortname: null
+  gitalk:
+    clientID: null
+    clientSecret: null
+    repository: null
+    owner: null
+    admin: null
+  valine:
+    app_id: null
+    app_key: null
+    placeholder: null
+    visitor: null
+    meta: null
+pageview:
+  provider: false
+  leancloud:
+    app_id: null
+    app_key: null
+    app_class: null
+search:
+  provider: default
+  google:
+    custom_search_engine_id: null
+analytics:
+  provider: false
+  google:
+    tracking_id: null
+    anonymize_ip: false
+markdown: kramdown
+highlighter: rouge
+permalink: date
+exclude:
+  - CHANGELOG.md
+  - HOW_TO_RELEASE.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README-*.md
+  - README.md
+  - gulpfile.js
+  - jekyll-text-theme.gemspec
+  - package-lock.json
+  - package.json
+  - /docs
+  - /node_modules
+  - /screenshots
+  - /test
+  - /vendor
+defaults:
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: article
+      sharing: true
+      license: true
+      aside:
+        toc: true
+      show_edit_on_github: true
+      show_subscribe: true
+      pageview: true
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
